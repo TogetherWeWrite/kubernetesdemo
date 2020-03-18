@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: cicdnginx
   labels:
-        run:nginxtest
+        run: nginxtest
 spec:
   selector:
     app: nginxtest
