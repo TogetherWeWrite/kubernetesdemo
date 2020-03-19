@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dockerregistry
+  labels:
+    app: dockerregistry
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: dockerregistry
+  template:
+    metadata:
+      labels:
+        app: dockerregistry
+    spec:
+      containers:
+      - name: dockerregistry
+        image: registry:2.7.1
+        ports:
+        - containerPort: 5000
