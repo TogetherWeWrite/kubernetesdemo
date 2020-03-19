@@ -17,5 +17,10 @@ spec:
       containers:
       - name: dockerregistry
         image: registry:2.7.1
+        env:
+        - name: username
+          value: "stijn"
+        - name: password
+          value: "appel"
         ports:
         - containerPort: 5000
