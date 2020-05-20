@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  mongo-authenticatieservice:
+    image: mongo:3.6.17-xenial
+    container_name: mongo-authenticatieservice
+    restart: unless-stopped
+    ports: 
+      - "27111:27017"
+    environment:
+      MONGO_INITDB_DATABASE: AuthenticatieServiceStore
+      MONGO_INITDB_ROOT_USERNAME: AuthenticatieService
+      MONGO_INITDB_ROOT_PASSWORD: TestPassword
+ 
+
