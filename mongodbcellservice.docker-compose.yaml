@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+  mongo-cellservice:
+    image: mongo:3.6.17-xenial
+    container_name: mongo-authenticatieservice
+    restart: unless-stopped
+    ports: 
+      - "27112:27017"
+    environment:
+      MONGO_INITDB_DATABASE: cellservicestore
+      MONGO_INITDB_ROOT_USERNAME: mongo
+      MONGO_INITDB_ROOT_PASSWORD: password
