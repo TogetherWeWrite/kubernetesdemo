@@ -3,7 +3,7 @@ version: "3.3"
 services:
   mongo-cellservice:
     image: mongo:3.6.17-xenial
-    container_name: mongo-authenticatieservice
+    container_name: mongo-cellservice
     restart: unless-stopped
     ports: 
       - "27112:27017"
